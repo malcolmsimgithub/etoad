@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "formatters":
+  {
+    "simple":
+    {
+      "fmt": "%(asctime)s - %(message)s",
+      "datefmt": "%Y-%m-%d %H:%M:%S"
+    }
+  },
+  "handlers":
+  {
+    "console":
+    {
+      "class": "logging.StreamHandler",
+      "level": "DEBUG",
+      "formatter": "simple"
+    },
+    "file":
+    {
+      "class": "logging.FileHandler",
+      "level": "DEBUG",
+      "formatter": "simple",
+      "filename": "EChem_Measurements.log",
+      "mode": "a",
+      "encoding": "utf-8"
+    },
+    "gui":
+    {
+      "class": "GenericHandler",
+      "level": "INFO",
+      "formatter": "simple"
+    },
+    "slack":
+    {
+      "class": "SlackBotHandler",
+      "level": "WARNING",
+      "formatter": "simple",
+      "channels": "U02BJE2BDB2"
+    }
+  },
+  "loggers":
+  {
+    "EChem":
+    {
+      "level": "DEBUG",
+      "handlers": ["console", "file", "gui", "slack"],
+      "propagate": "no"
+    }
+  }
+}

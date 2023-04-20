@@ -1,0 +1,84 @@
+{
+  "IterationSettings": {
+    "no_iterations": 1
+  },
+  "TechniqueParameters": {
+    "Initial Voltage": {
+      "name": "Ei",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 0.5,
+      "constraints": "-1.3 <= x <= 1.0"
+    },
+    "Initial Voltage vs OCV": {
+      "name": "OCi",
+      "variable_type": "bool",
+      "changed_over_iterations": false,
+      "value": false,
+      "constraints": null
+    },
+    "Rest Time": {
+      "name": "Rest_time_Ti",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 10,
+      "constraints": "0 < x <= 120"
+    },
+    "Final Voltage": {
+      "name": "Ef",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": -0.5,
+      "constraints": "-1.3 <= x <= 1.0"
+    },
+    "Final Voltage vs OCV": {
+      "name": "OCf",
+      "variable_type": "bool",
+      "changed_over_iterations": false,
+      "value": false,
+      "constraints": null
+    },
+    "Pulse Height": {
+      "name": "PH",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 0.025,
+      "constraints": "0 < x <= 0.5"
+    },
+    "Pulse Width": {
+      "name": "PW",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 0.200,
+      "constraints": "0 < x < 5"
+    },
+    "Step Height": {
+      "name": "SH",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 0.010,
+      "constraints": "0 < x <= 0.5"
+    },
+    "Start Averaging Interval": {
+      "name": "Begin_measuring_I",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 0.80,
+      "constraints": "0 <= x <= 1"
+    },
+    "End Averaging Interval": {
+      "name": "End_measuring_I",
+      "variable_type": "float",
+      "changed_over_iterations": false,
+      "value": 1.0,
+      "constraints": "0 <= x <= 1"
+    },
+    "Current Range": {
+      "name": "I_Range",
+      "variable_type": "int",
+      "changed_over_iterations": false,
+      "value": 8,
+      "constraints": "x in range(-1, 13)"
+    }
+  }
+}

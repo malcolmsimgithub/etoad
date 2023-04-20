@@ -1,0 +1,64 @@
+{
+  "Protocol Name": "Diquat Potentials and Stability",
+  "Steps": {
+    "DPV": {
+      "task": "measure",
+      "technique": "DPV",
+      "parameters": {
+        "Initial Voltage": 0.8,
+        "Final Voltage": -1.2
+      },
+      "update_parameters": [],
+      "analysis_settings": {
+        "Plot": {
+          "title": "Differential Pulsed Voltammetry"
+        },
+        "Peak Picking": {},
+        "CV Parameters": {
+          "filters": [
+            {
+              "key": "peak",
+              "operation": "x > -0.2"
+            },
+            {
+              "key": "rel_shape_factor",
+              "operation": "x > 0.1"
+            }
+          ],
+          "selection": {
+            "key": "peak",
+            "operation": "max(x)"
+          }
+        }
+      }
+    },
+    "CV": {
+      "task": "measure",
+      "technique": "CV",
+      "parameters": {
+        "Voltage Profile": [0, 0, 0, 0, 0],
+        "Number of Cycles": 10
+      },
+      "update_parameters": [
+        {
+          "parameter": "Voltage Profile",
+          "from measurement": "DPV",
+          "key": "CV Parameters"
+        }
+      ],
+      "analysis_settings": {
+        "Plot": {},
+        "Peak Picking": {},
+        "Integration": {}
+      }
+    }
+  },
+  "Sample Volume": 1.0,
+  "Total Volume": 5.0,
+  "Discard Sample": false,
+  "Purge": 30,
+  "Wash": {
+    "wash_volume": 5.0,
+    "washing_cycles": 1
+  }
+}

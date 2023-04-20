@@ -1,0 +1,28 @@
+{
+  "Peak Picking": {
+    "min_peak_width": 2.5,
+    "min_signal_noise": 5,
+    "rel_height": 0.95
+  },
+  "CV Parameters": {
+    "filters": [
+      {
+        "key": "rel_shape_factor",
+        "operation": "x > 0.3"
+      }
+    ],
+    "selection": {
+      "key": "peak",
+      "operation": "max(x)"
+    },
+    "min_voltage": -1.3,
+    "max_voltage": 0.8,
+    "additional_voltage": 0.1
+  },
+  "Plot": {
+    "title": ""
+  },
+  "Integration": {
+    "plot": true
+  }
+}

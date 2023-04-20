@@ -1,0 +1,7 @@
+{
+  "port": "USB0",
+  "channel_ids": [0, 1],
+  "default_channel_id": 1,
+  "timeout": 5,
+  "plot_in_real_time": true
+}

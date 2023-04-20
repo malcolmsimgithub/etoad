@@ -1,0 +1,29 @@
+for now ignore set parameters 
+item of change: 
+CV_Defaults.json:
+	Added the upper keys "Meta" and "Technical"
+
+EChemMethod: 
+-parse_parameters:
+	added ther iteration number to seperate the 
+parameter
+	implemented code that handle iterations in the config dictionary value section.
+	Further rules need to be specified
+
+-load_parameters:
+	changed return value parameters_list into a list of the list of the parameters of that specific iteration
+
+TODO:  change _get_config set_parameters part due to "Default.json" change
+
+EChemController:
+-_load_parameters:
+	changed input "set_parameters" into parameters_list, 
+
+-load_technique --> _load_technique:
+	changed input "set_parameters" into parameters_list
+
+-do_measurement --> _do_measurement_no_iterations
+
+-do_measurement: 
+	(new function )
+	"Method that loop through load technique and do measurement for iteration of measurements"

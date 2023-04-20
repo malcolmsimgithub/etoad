@@ -1,0 +1,25 @@
+Need to create a script to measure samples
+
+
+Will create atlas planner and olympus campaign.
+
+Then, create workflow manager object
+Args:
+            -logger_settings: Path to the json file containing the logger settings
+            -potentiostat_settings: Path to the json file containing the potentiostat settings
+            -sampler_settings: Path to the json file containing the sampler settings
+            -data_path: Path to the folder where data should be stored.
+            -logfile: Optional - name of the logfile used.
+
+
+-get recc params, turn into samples (list of dict)
+
+- samples: List of samples (each one given as a dictionary)
+- Each sample should be given as a dictionary with the keys "sample_name", "sample_location" and "workflow_path".
+
+
+-Workflowmanager.submitsamples(samples)
+-results(dict) = Workflowmanager.start_system()
+
+- feed into optimizer for next loop and repeat
+

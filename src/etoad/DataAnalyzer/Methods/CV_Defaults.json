@@ -1,0 +1,15 @@
+{
+  "Initialization": {
+    "skip_cycles": 2
+  },
+  "Peak Picking": {
+    "plot": true
+  },
+  "Plot": {
+    "title": "Cyclic Voltammetry"
+  },
+  "Integration": {
+    "plot": true
+  },
+  "Peaks Scanrate": {}
+}

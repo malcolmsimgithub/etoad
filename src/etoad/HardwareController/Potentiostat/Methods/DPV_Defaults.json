@@ -1,0 +1,74 @@
+{
+  "Initial Voltage": {
+    "name": "Ei",
+    "variable_type": "float",
+    "value": -0.5,
+    "constraints": "-2.0 <= x <= 1.5"
+  },
+  "Initial Voltage vs OCV": {
+    "name": "OCi",
+    "variable_type": "bool",
+    "value": false,
+    "constraints": null
+  },
+  "Rest Time": {
+    "name": "Rest_time_Ti",
+    "variable_type": "float",
+    "value": 10,
+    "constraints": "0 < x <= 120"
+  },
+  "Final Voltage": {
+    "name": "Ef",
+    "variable_type": "float",
+    "value": 0.5,
+    "constraints": "-2.0 <= x <= 1.5"
+  },
+  "Final Voltage vs OCV": {
+    "name": "OCf",
+    "variable_type": "bool",
+    "value": false,
+    "constraints": null
+  },
+  "Pulse Height": {
+    "name": "PH",
+    "variable_type": "float",
+    "value": 0.010,
+    "constraints": "0 < x <= 0.5"
+  },
+  "Pulse Width": {
+    "name": "PW",
+    "variable_type": "float",
+    "value": 0.100,
+    "constraints": "0 < x < 5"
+  },
+  "Step Height": {
+    "name": "SH",
+    "variable_type": "float",
+    "value": 0.005,
+    "constraints": "0 < x <= 0.5"
+  },
+  "Step Width": {
+    "name": "ST",
+    "variable_type": "float",
+    "value": 0.500,
+    "constraints": "0 < x < 5"
+  },
+  "Start Averaging Interval": {
+    "name": "Begin_measuring_I",
+    "variable_type": "float",
+    "value": 0.80,
+    "constraints": "0 <= x <= 1"
+  },
+  "End Averaging Interval": {
+    "name": "End_measuring_I",
+    "variable_type": "float",
+    "value": 1.0,
+    "constraints": "0 <= x <= 1"
+  },
+  "Current Range": {
+    "name": "I_Range",
+    "variable_type": "int",
+    "value": 8,
+    "constraints": "x in range(-1, 13)"
+  }
+}
