@@ -1,3 +1,21 @@
+[project]
+name = "SilaEtoad"
+version = "0.0.0"
+requires-python = ">=3.7"
+dependencies = [
+    "sila2",
+    "typer",
+]
+
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=0.61.0"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["SilaEtoad*"]
+
+[tool.setuptools.package-data]
+"SilaEtoad.generated" = [
+    "*/*.sila.xml",
+    "*/*.proto",
+]

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "SiLAFramework.proto";
+
+package sila2.org.silastandard.examples.etoad.v1;
+
+/* Sila interface for the etoad platform */
+service Etoad {
+  /* Adds a job for etoad to do */
+  rpc RunJob (sila2.org.silastandard.examples.etoad.v1.RunJob_Parameters) returns (sila2.org.silastandard.CommandConfirmation) {}
+  /* Monitor the state of RunJob */
+  rpc RunJob_Info (sila2.org.silastandard.CommandExecutionUUID) returns (stream sila2.org.silastandard.ExecutionInfo) {}
+  /* Retrieve intermediate responses of RunJob */
+  rpc RunJob_Intermediate (sila2.org.silastandard.CommandExecutionUUID) returns (stream sila2.org.silastandard.examples.etoad.v1.RunJob_IntermediateResponses) {}
+  /* Retrieve result of RunJob */
+  rpc RunJob_Result(sila2.org.silastandard.CommandExecutionUUID) returns (sila2.org.silastandard.examples.etoad.v1.RunJob_Responses) {}
+}
+
+/* Parameters for RunJob */
+message RunJob_Parameters {
+  sila2.org.silastandard.String JobFile = 1;  /* the job file for etoad to run */
+}
+
+/* Responses of RunJob */
+message RunJob_Responses {
+  sila2.org.silastandard.String Termination = 1;  /* Termination message */
+}
+
+/* Intermediate responses of RunJob */
+message RunJob_IntermediateResponses {
+  sila2.org.silastandard.String Status = 1;  /* Status of batch */
+  sila2.org.silastandard.Binary Payload = 2;  /* Binary Payload */
+}
