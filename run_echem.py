@@ -14,8 +14,11 @@ from olympus.objects import (
 from olympus.planners import Planner
 from olympus.campaigns import Campaign, ParameterSpace
 from olympus.surfaces import Surface
+from olympus.scalarizers import Scalarizer
 
 from olympus.utils.misc import get_hypervolume
+
+
 
 from atlas.optimizers.gp.planner import BoTorchPlanner
 
@@ -107,13 +110,6 @@ param_space.add(
     )
 )
 
-param_space.add(
-    ParameterCategorical(
-        name='electrode',
-        options=["glassy carbon", "pt disk"],
-        descriptors=[None for i in range(2)],        # add descriptors later
-    )
-)
 
 param_space.add(
     ParameterContinuous(
